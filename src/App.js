@@ -51,15 +51,15 @@ function App() {
         });
       });
 //////////////////////////////////
-      spotify.getPlaylist('37i9dQZF1DX3rxVfibe1L0')
-      .then((response) => {
-        dispatch({
-          type: 'SET_DISCOVER_WEEKLY',
-          discover_weekly: response,
-        });
-      });
-    }
-    console.log(spotify.getPlaylist());
+//         spotify.getPlaylist('37i9dQZF1DX3rxVfibe1L0')
+//       .then((response) => {
+//         dispatch({
+//           type: 'SET_DISCOVER_WEEKLY',
+//           discover_weekly: response,
+//         });
+//       });
+//     }
+//     console.log(spotify.getPlaylist());
 
     //  console.log("I have a token  : ", token);
 
