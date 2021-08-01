@@ -41,6 +41,14 @@ function App() {
           type: 'SET_PLAYLISTS',
           playlists: playlists,
         });
+        let playlistTop = playlists.items[0].id;
+        spotifyApi.getPlaylist(playlistTop).then((response) => {
+          console.log("currPlaylist >>>",response);
+          dispatch({
+            type: "SET_DISCOVER_WEEKLY",
+            discover_weekly: response,
+          });
+        });
       });
 //////////////////////////////////
       spotify.getPlaylist('37i9dQZF1DX3rxVfibe1L0')
