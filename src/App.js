@@ -41,6 +41,7 @@ function App() {
           type: 'SET_PLAYLISTS',
           playlists: playlists,
         });
+
         let playlistTop = playlists.items[0].id;
         spotify.getPlaylist(playlistTop).then((response) => {
           console.log("currPlaylist >>>",response);
@@ -50,6 +51,8 @@ function App() {
           });
         });
       });
+    }
+
 //////////////////////////////////
 //         spotify.getPlaylist('37i9dQZF1DX3rxVfibe1L0')
 //       .then((response) => {
@@ -63,9 +66,11 @@ function App() {
 
     //  console.log("I have a token  : ", token);
 
-//   }, []);
-  // console.log("details of user" ,user);
-  // console.log("details of token" ,token);
+    // console.log("details of user" ,user);
+    // console.log("details of token" ,token);
+
+}, []);
+
   return (
     <div className="App">
       {
@@ -73,9 +78,7 @@ function App() {
           <Player spotify={spotify} />
           :
           <Login />
-
       }
-
     </div>
   );
 }
